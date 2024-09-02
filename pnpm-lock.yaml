@@ -14,6 +14,9 @@ importers:
       vue:
         specifier: ^3.2.13
         version: 3.4.38(typescript@4.5.5)
+      vue-property-decorator:
+        specifier: 10.0.0-rc.3
+        version: 10.0.0-rc.3(vue-class-component@7.2.6(vue@3.4.38(typescript@4.5.5)))(vue@3.4.38(typescript@4.5.5))
       vue-router:
         specifier: ^4.0.3
         version: 4.4.3(vue@3.4.38(typescript@4.5.5))
@@ -3773,6 +3776,11 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==, tarball: https://registry.npmmirror.com/vary/-/vary-1.1.2.tgz}
     engines: {node: '>= 0.8'}
 
+  vue-class-component@7.2.6:
+    resolution: {integrity: sha512-+eaQXVrAm/LldalI272PpDe3+i4mPis0ORiMYxF6Ae4hyuCh15W8Idet7wPUEs4N4YptgFHGys4UrgNQOMyO6w==, tarball: https://registry.npmmirror.com/vue-class-component/-/vue-class-component-7.2.6.tgz}
+    peerDependencies:
+      vue: ^2.0.0
+
   vue-eslint-parser@8.3.0:
     resolution: {integrity: sha512-dzHGG3+sYwSf6zFBa0Gi9ZDshD7+ad14DGOdTLjruRVgZXe2J+DcZ9iUhyR48z5g1PqRa20yt3Njna/veLJL/g==, tarball: https://registry.npmmirror.com/vue-eslint-parser/-/vue-eslint-parser-8.3.0.tgz}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -3812,6 +3820,12 @@ packages:
         optional: true
       vue:
         optional: true
+
+  vue-property-decorator@10.0.0-rc.3:
+    resolution: {integrity: sha512-EGqjf8Lq+kTausZzfLB1ynWOcyay8ZLAc5p2VlKGEX2q+BjYw84oZxr6IcdwuxGIdNmriZqPUX6AlAluBdnbEg==, tarball: https://registry.npmmirror.com/vue-property-decorator/-/vue-property-decorator-10.0.0-rc.3.tgz}
+    peerDependencies:
+      vue: '*'
+      vue-class-component: '*'
 
   vue-router@4.4.3:
     resolution: {integrity: sha512-sv6wmNKx2j3aqJQDMxLFzs/u/mjA9Z5LCgy6BE0f7yFWMjrPLnS/sPNn8ARY/FXw6byV18EFutn5lTO6+UsV5A==, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-4.4.3.tgz}
@@ -8117,6 +8131,10 @@ snapshots:
 
   vary@1.1.2: {}
 
+  vue-class-component@7.2.6(vue@3.4.38(typescript@4.5.5)):
+    dependencies:
+      vue: 3.4.38(typescript@4.5.5)
+
   vue-eslint-parser@8.3.0(eslint@7.32.0):
     dependencies:
       debug: 4.3.6
@@ -8207,6 +8225,11 @@ snapshots:
     optionalDependencies:
       '@vue/compiler-sfc': 3.4.38
       vue: 3.4.38(typescript@4.5.5)
+
+  vue-property-decorator@10.0.0-rc.3(vue-class-component@7.2.6(vue@3.4.38(typescript@4.5.5)))(vue@3.4.38(typescript@4.5.5)):
+    dependencies:
+      vue: 3.4.38(typescript@4.5.5)
+      vue-class-component: 7.2.6(vue@3.4.38(typescript@4.5.5))
 
   vue-router@4.4.3(vue@3.4.38(typescript@4.5.5)):
     dependencies:
