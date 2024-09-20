@@ -32,7 +32,26 @@ export default defineConfig({
         additionalData: `
           @use "@/styles/element/index.scss" as *;
           @use "@/styles/var.scss" as *;
+          @use "@/styles/sky/_mixins.scss" as *;
+          @use "@/styles/sky/_variables.scss" as *;
         `
+      }
+    }
+  },
+  // 代理-解决跨域问题
+  server: {
+    open: true, // 自动弹出浏览器
+    port: 5173, // web启动端口
+    proxy: {
+      '/api': {
+        // 获取数据的服务器地址设置
+        target: 'http://localhost:8080',
+        // 需要代理跨域
+        changeOrigin: true,
+        // 路径重写
+        rewrite: (path: any) => {
+          return path.replace(new RegExp('^/api'), '')
+        }
       }
     }
   }
