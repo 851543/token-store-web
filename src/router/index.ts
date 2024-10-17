@@ -7,11 +7,26 @@ const router = createRouter({
       path: '/',
       name: 'Layout',
       component: () => import('@/views/Layout/index.vue'),
+      redirect: '/dashboard',
       children: [
         {
-          path: '',
-          name: 'Home',
-          component: () => import('@/views/Home/index.vue')
+          path: '/dashboard',
+          component: () => import('@/views/Dashboard/index.vue'),
+          name: 'Dashboard',
+          meta: {
+            title: '工作台',
+            icon: 'dashboard',
+            affix: true
+          }
+        },
+        {
+          path: '/employee',
+          component: () => import('@/views/Employee/index.vue'),
+          name: 'Employee',
+          meta: {
+            title: '员工管理',
+            icon: 'icon-employee'
+          }
         }
       ]
     },
