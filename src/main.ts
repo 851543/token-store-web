@@ -10,9 +10,9 @@ import '@/styles/sky/home.scss'
 
 // sky样式表
 import '@/styles/sky/newRJWMsystem.scss'
-import '@/styles/sky/icon/iconfont.css'
+// import '@/styles/sky/icon/iconfont.css'
 
-import '@/icons/components'
+// import '@/icons/components'
 
 import App from './App.vue'
 import router from './router'
