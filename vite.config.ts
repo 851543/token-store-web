@@ -35,7 +35,7 @@ export default defineConfig({
           @use "@/styles/sky/_mixins.scss" as *;
           @use "@/styles/sky/_variables.scss" as *;
         `,
-        api: 'modern-compiler' // or 'modern'
+        api: 'modern-compiler', // or 'modern'
       },
       less: {
         javascriptEnabled: true

@@ -100,7 +100,7 @@ const login = async () => {
   justify-content: center;
   align-items: center;
   height: 100%;
-  // background: #476dbe;
+  background: #476dbe;
   background-color: $xtxColor;
 }
 

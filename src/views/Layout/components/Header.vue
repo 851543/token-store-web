@@ -2,7 +2,7 @@
 <template>
   <div class="navbar">
     <!-- 营业状态弹层 -->
-    <el-dialog title="营业状态设置" width="25%" :show-close="false">
+    <!-- <el-dialog title="营业状态设置" width="25%" :show-close="false">
       <el-radio-group>
         <el-radio :label="1">
           营业中
@@ -21,7 +21,7 @@
           <el-button type="primary">确 定</el-button>
         </span>
       </template>
-    </el-dialog>
+    </el-dialog> -->
   </div>
 </template>
 <style lang="scss" scoped>
@@ -29,7 +29,7 @@
   height: 60px;
   // overflow: hidden;
   position: relative;
-  background: #ffc100;
+  background: $xtxColor;
 
   // box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
   .statusBox {

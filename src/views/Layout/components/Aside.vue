@@ -15,11 +15,22 @@ const getRoutes = () => {
     return menu.children
   }
 }
+
 onMounted(async () => {
   routes.value = await getRoutes()
 })
 
-const isCollapse = ref(false)
+//  logo变化响应
+const isCollapse = ref(true)
+
+// TODO bug 循环依赖scss问题
+// import variables from '@/styles/sky/_variables.scss'
+// 写死样式变量
+const variables = ref({
+  menuBg:"#343744",
+  menuText:"#bfcbd9",
+  menuActiveText:"#FFC200"
+})
 </script>
 <template>
   <div>
@@ -32,7 +43,12 @@ const isCollapse = ref(false)
       </div>
     </div>
     <el-scrollbar wrap-class="scrollbar-wrapper">
-      <el-menu>
+      <el-menu :collapse="isCollapse"
+               :background-color="variables.menuBg"
+               :text-color="variables.menuText"
+               :active-text-color="variables.menuActiveText"
+               :unique-opened="false"
+               :collapse-transition="false">
         <sidebar-item
           v-for="route in routes"
           :key="route.path"
@@ -47,7 +63,7 @@ const isCollapse = ref(false)
 <style lang="scss" scoped>
 .logo {
   text-align: center;
-  background-color: #ffc100;
+  background-color: $xtxColor;
   padding: 15px 0 0;
   height: 60px;
   img {
@@ -63,6 +79,7 @@ const isCollapse = ref(false)
 .el-scrollbar {
   height: 100%;
   background-color: rgb(52, 55, 68);
+  // background-color: rgb(243, 202, 114);
 }
 
 .el-menu {

@@ -18,7 +18,7 @@ const props = defineProps({
     default: ''
   }
 })
-console.log(props.item)
+console.log(props.isCollapse)
 </script>
 <template>
   <div>
